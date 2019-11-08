@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Color</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h3>Welcome !!!</h3>
+    <button onclick="changeColor()">Click to change color</button>
+
+    <script>
+        function changeColor() {
+            var a = prompt("Input backgroud color.", "red");
+            if (a !== 'no') {
+                document.body.style.backgroundColor = a;
+                var b = prompt("Input foreground color.", "green");
+                document.body.style.color = b;
+                window.setTimeout(changeColor, 0);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

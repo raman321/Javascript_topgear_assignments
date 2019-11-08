@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Loops</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p>The assessment marks are: 70,75,87,80,90,94,76,87,95,96</p>
+    <button type="button" onclick="avg()">Calculate</button>
+    <div id="show"></div>
+
+    <script>
+        function avg() {
+            var arr = [70, 75, 87, 80, 90, 94, 76, 87, 95, 96], avg = 0, i;
+            for (i = 0; i < 10; i++) {
+                avg = avg + arr[i];
+            }
+
+            console.log(typeof (avg));
+            document.getElementById("show").innerHTML = "The average marks are: " + avg / 10;
+        }
+    </script>
+</body>
+
+</html>

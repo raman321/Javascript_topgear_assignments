@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Errors</title>
+</head>
+
+<body>
+    <script>
+        function is_Error(input) {
+            return input instanceof Error || toString.call(input) === '[object Error]';
+        }
+
+        document.write(is_Error(new Error('foo')));
+        document.write("<br>" + is_Error(100));
+        document.write("<br>" + is_Error('foo'));
+    </script>
+</body>
+
+</html>

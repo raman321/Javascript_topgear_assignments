@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Events:3</title>
+
+    <style>
+        .num {
+            position: absolute;
+        }
+
+        #prev {
+            cursor: pointer;
+            position: absolute;
+            top: 30%;
+            left: 27%;
+
+            overflow: hidden;
+        }
+
+        #next {
+            cursor: pointer;
+            position: absolute;
+            top: 30%;
+            overflow: hidden;
+            left: 65%;
+        }
+
+        .slide {
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="SlideshowContainer">
+        <div class="slide">
+            <div class="num">1/5</div>
+            <img src="./Desert.jpg" style="width:50%">
+        </div>
+
+        <div class="slide">
+            <div class="num">2/5</div>
+            <img src="./Tulips.jpg" style="width:50%">
+        </div>
+
+        <div class="slide">
+            <div class="num">3/5</div>
+            <img src="./Koala.jpg" style="width:50%">
+        </div>
+
+        <div class="slide">
+            <div class="num">4/5</div>
+            <img src="./Penguins.jpg" style="width:50%">
+        </div>
+
+        <div class="slide">
+            <div class="num">5/5</div>
+            <img src="./Jellyfish.jpg" style="width:50%">
+        </div>
+
+        <button id="prev" onclick="plusSlides(-1)">Prev</button>
+        <div id="next"><button onclick="plusSlides(1)">Next</button></div>
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+            // alert(slideIndex);
+
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+
+            var i;
+            var slides = document.getElementsByClassName("slide");
+
+
+
+            if (slideIndex >= slides.length) { document.getElementById("next").style.display = "none"; }
+            else { document.getElementById("next").style.display = "block"; }
+            if (slideIndex <= 1) {
+                document.getElementById("prev").style.display = "none";
+            }
+            else { document.getElementById("prev").style.display = "block"; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

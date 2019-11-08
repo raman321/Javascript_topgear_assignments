@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Errors</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button type="button" onclick="divide()">Divide</button>
+    <script>
+        function divide() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            try {
+                if (y == 0)
+                    document.write("Denominator cannot be 0");
+                else
+                    document.write("Division is: " + x / y);
+            }
+            catch (err) {
+                document.write(err);
+            }
+        }
+    </script>
+</body>
+
+</html>

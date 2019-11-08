@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript loops:1</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="show"></div>
+
+    <script>
+        window.onload = function () {
+            var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], names = "", i;
+            for (i = 0; i < 10; i++) {
+                if (i % 2 == 0)
+                    names += arr[i] + "<br>";
+            }
+
+            document.getElementById("show").innerHTML =
+
+                document.getElementById("show").innerHTML = "The array contains: " + arr + "<br>" + names;
+        }
+    </script>
+
+</body>
+
+</html>

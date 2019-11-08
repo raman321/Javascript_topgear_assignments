@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Functions:1</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <div id="show" width="500px"></div>
+    <script>
+        var a = 0, b = 1, c, i, cnt = 100;
+
+        var arr = [];
+        arr[0] = a, arr[1] = b;
+        i = 2;
+        while (cnt != 0) {
+            c = a + b;
+            arr[i] = c;
+            a = b;
+            b = c;
+            cnt--;
+            i++;
+        }
+        document.getElementById("show").innerHTML = "The fibonacci series is: <br>" + arr;
+    </script>
+</body>
+
+</html>

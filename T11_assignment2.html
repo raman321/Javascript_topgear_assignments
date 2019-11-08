@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Conditions</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <input type="text" id="num4">
+    <input type="text" id="num5">
+    <button type="button" onclick="greatest()">Get max</button>
+    <script>
+
+        function greatest() {
+            var a, b, c, d, e, largest;
+            a = document.getElementById("num1").value;
+            b = document.getElementById("num2").value;
+            c = document.getElementById("num3").value;
+            d = document.getElementById("num4").value;
+            e = document.getElementById("num5").value;
+            if ((a > b) && (a > c) && (a > d) && (a > e)) {
+                largest = a;
+            }
+            else if ((b > a) && (b > c) && (b > d) && (b > e)) {
+                largest = b;
+            }
+            else if ((c > a) && (c > a) && (c > d) && (c > e)) {
+                largest = c;
+            }
+            else if ((d > a) && (d > c) && (d > a) && (d > e)) {
+                largest = d;
+            }
+            else {
+                largest = e;
+            }
+            document.write(largest);
+        }
+    </script>
+</body>
+
+</html>

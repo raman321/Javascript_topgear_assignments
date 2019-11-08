@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript loops:2</title>
+</head>
+
+<body>
+    <select name="fruits" id="fruit" style="padding:3px;margin-bottom:10px;" onchange="init()">
+
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Mango">Mango</option>
+        <option value="Banana">Banana</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Guava">Guava</option>
+        <option value="Grapes">Grapes</option>
+    </select><br>
+</body>
+
+<script>
+    function init() {
+        var x = document.getElementById("fruit");
+        var txt1 = "";
+        var i;
+        l = document.getElementById("fruit").length;
+
+        for (i = 0; i < x.length; i++) {
+            txt1 = txt1 + "\n" + x.options[i].text;
+        }
+        alert("\nThere are " + l + " fruits\nThe items in dropdown list are:\n" + txt1 + "\nYou selected " + fruit.value);
+    }
+</script>
+
+</html>

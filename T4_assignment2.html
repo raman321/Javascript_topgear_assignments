@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Javascript Statements and Comments:2</title>
+</head>
+
+<body>
+    <input type="text" id="v" onchange="getVar()">
+
+    <div id="show" style="margin-top: 26px"></div>
+
+    <script>
+        function getVar() {
+            var var_name = 'abcd';
+            var n = document.getElementById('v').value;
+            this[var_name] = n;
+            console.log(this[var_name]);
+            document.getElementById('show').innerHTML = "Changed variable name is: " + this[var_name];
+        }
+    </script>
+</body>
+<html>

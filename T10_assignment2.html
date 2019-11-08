@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Events</title>
+</head>
+
+<body>
+
+    <img id="image1" onmouseover="Imagechange()" border="0" src="./Desert.jpg" alt="desert" width="300px" height="300px">
+
+    <img id="image2" onmouseover="Imagechange1()" onmouseout="Imagerestore()" border="0" src="./Desert.jpg" alt="desert"
+        width="300px" height="300px">
+    <img id="image3" onmousedown="Imagenew()" onmouseup="Imagerestore()" border="0" src="./Desert.jpg" alt="desert"
+        width="300px" height="300px">
+    <script>
+        function Imagechange() {
+            document.getElementById("image1").src = "./Penguins.jpg";
+        }
+        function Imagechange1() {
+            document.getElementById("image2").src = "./Penguins.jpg";
+        }
+        function Imagenew() {
+            document.getElementById("image3").src = "./Koala.jpg";
+        }
+        function Imagerestore() {
+            document.getElementById("image2").src = "./Desert.jpg";
+            document.getElementById("image3").src = "./Desert.jpg";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Variables and Datatypes:1</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <input type="text" id="first" name="first">
+    <input type="text" id="sec" name="sec">
+    <button type="button" onclick="check()">ADD</button>
+    <div id="add" style="margin-top: 22px"></div>
+    <script>
+        function check() {
+            var a, b;
+            a = (document.getElementById("first").value);
+
+            b = (document.getElementById("sec").value);
+            var sum = 0;
+            if (parseInt(a) && parseInt(b)) {
+                sum = parseInt(a) + parseInt(b);
+                //document.getElementById("add").innerHTML=sum;
+                document.getElementById("add").innerHTML = "The sum is: " + sum;
+            }
+            else
+                document.getElementById("add").innerHTML = "Sorry.... Only Nos will be added";
+
+        }
+    </script>
+
+</body>
+
+</html>

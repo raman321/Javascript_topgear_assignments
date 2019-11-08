@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Objects:2 </title>
+</head>
+
+<body>
+    <p> Given objects are:<br>
+        'b': 'apple',<br>
+        'c': 'mango',<br>
+        'a': 'orange',<br>
+        'e': 'banana',<br>
+        'd': 'pineapple'
+    </p>
+    <button type="button" onclick="sorting()">The sorted objects are</button>
+    <div id="res"></div>
+    <script>
+        function sorting() {
+            var myObj = {
+                'b': 'apple',
+                'c': 'mango',
+                'a': 'orange',
+                'e': 'banana',
+                'd': 'pineapple'
+            },
+                keys = [],
+                result = "",
+                k, i, len;
+
+            for (k in myObj) {
+                if (myObj.hasOwnProperty(k)) {
+                    keys.push(k);
+                }
+            }
+
+            keys.sort();
+
+            len = keys.length;
+
+            for (i = 0; i < len; i++) {
+
+                k = keys[i];
+                result += keys[i] + ":" + myObj[k] + "<br>";
+            }
+            document.getElementById('res').innerHTML = result;
+            //arr[i]=myObj[k];
+
+            //keys ;
+
+        }
+    </script>
+</body>
+
+</html>

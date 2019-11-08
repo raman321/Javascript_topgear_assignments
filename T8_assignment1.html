@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Objects:1</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    Name: <input type="text" id="name"><br>
+    Publisher: <input type="text" id="pub"><br>
+    Price: <input type="text" id="cost"><br>
+    <button type="button" onclick="displayAllDetails()">OK</button>
+    <div id="show"></div>
+    <script>
+        function displayAllDetails() {
+            var n = document.getElementById("name").value;
+            var pb = document.getElementById("pub").value;
+            var pr = parseInt(document.getElementById("cost").value);
+            var cd = { name: n, publisher: pb, price: pr };
+            var x = cd.price;
+            var c = x + (0.1 * x) + (-0.3 * x);
+            document.getElementById("show").innerHTML = "The CD details are:<br>Name: " + cd.name + "<br>Publisher: " + cd.publisher + "<br>Final price: " + c;
+        }
+    </script>
+</body>
+<html>

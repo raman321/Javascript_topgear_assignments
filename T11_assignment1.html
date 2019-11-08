@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Conditions</title>
+</head>
+
+<body>
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <button type="button" onclick="multiply()">Get Sign</button>
+    <script>
+        function multiply() {
+            var x, y, z;
+            x = document.getElementById("num1").value;
+            y = document.getElementById("num2").value;
+            z = document.getElementById("num3").value;
+            //var res=x*y*z;
+
+            if (x > 0 && y > 0 && z > 0) {
+                alert("The sign is +");
+            }
+            else if ((x > 0 && y > 0 && z < 0) || (x < 0 && y > 0 && z > 0) || (x > 0 && y < 0 && z > 0)) {
+                alert("The sign is -");
+            }
+            else if ((x > 0 && y < 0 && z < 0) || (x < 0 && y > 0 && z < 0) || (x < 0 && y < 0 && z > 0)) {
+                alert("The sign is +");
+            }
+            else {
+                alert("The sign is -");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

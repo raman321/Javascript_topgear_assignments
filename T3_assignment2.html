@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Topic 3: Assignment 2</title>
+</head>
+
+<body>
+    <input type="text" id="str1" placeholder="Enter the string">
+    <button type="button" onclick="titleCase(document.getElementById('str1').value)">Change</button>
+    <div id="show" style="margin-top: 23px"></div>
+    <script>
+        function titleCase(str) {
+            var splitStr = str.toLowerCase().split(' ');
+            for (var i = 0; i < splitStr.length; i++) {
+                // You do not need to check if i is larger than splitStr length, as your for does that for you
+                // Assign it back to the array
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            }
+            // Directly return the joined string
+            console.log(splitStr.join(' '));
+            document.getElementById('show').innerHTML = "Entered string first letter is uppercase: " + splitStr.join(' ');
+        }
+    </script>
+</body>
+
+</html>

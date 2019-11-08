@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Loops</title>
+</head>
+
+<body>
+    The numbers are:5,8,1,3,4,6<br>
+    <button onclick="bubbleSort([5,8,1,3,4,6])">Bubble Sort</button>
+    <button onclick="Selection_Sort([5,8,1,3,4,6],function(a, b) { return a - b; })">Selection Sort</button><br>
+    <div id="show"></div>
+
+    <script>
+        function bubbleSort(items) {
+            var length = items.length;
+            for (var i = 0; i < length; i++) {
+                for (var j = 0; j < (length - i - 1); j++) {
+
+                    if (items[j] > items[j + 1]) {
+
+                        var tmp = items[j];
+                        items[j] = items[j + 1];
+                        items[j + 1] = tmp;
+                    }
+                }
+
+            }
+            document.getElementById('show').innerHTML = "Sorted elements using Bubble sort are: " + items;
+        }
+
+
+        function Selection_Sort(arr, compare_Function) {
+
+            function compare(a, b) {
+                return a - b;
+            }
+            var min = 0;
+            var index = 0;
+            var temp = 0;
+
+            //{Function} compare_Function Compare function
+            compare_Function = compare_Function || compare;
+
+            for (var i = 0; i < arr.length; i += 1) {
+                index = i;
+                min = arr[i];
+
+                for (var j = i + 1; j < arr.length; j += 1) {
+                    if (compare_Function(min, arr[j]) > 0) {
+                        min = arr[j];
+                        index = j;
+                    }
+                }
+
+                temp = arr[i];
+                arr[i] = min;
+                arr[index] = temp;
+            }
+
+
+            document.getElementById("show").innerHTML = "Sorted elements using Selection sort are: " + arr;
+        }
+    </script>
+</body>
+
+</html>
